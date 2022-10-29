@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View, } from 'react-native';
 import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions, } from 'react-native/Libraries/NewAppScreen';
 import BottonSP from './components/BottonSP';
+import HomeSP from './components/screens/HomeSP';
 /* Finalizacion de las importaciones */
 
 /* Inicio de aplicacion -- Agregamos las partes a importar para cada pantalla o accion */
@@ -10,11 +11,14 @@ function App() {
   return(
     <SafeAreaView style = {styles.container}>
         <Text style = { [styles.textCenter] }>
-          NUEVA ORDEN
+          Nuevos Perifericos
         </Text>
-
-      <BottonSP/>
-      
+      <BottonSP 
+      text = "Comprar nuevos Perifericos"
+      onPress = {() => {
+          alert("Creando orden...")
+        }}
+      />
     </SafeAreaView>
   );
 };
@@ -25,8 +29,8 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'yellow',
+    justifyContent: 'center',
     alignItems: 'center',
-    color: 'dark',
     fontSize: 25,
   },
   textCenter: {
@@ -34,6 +38,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontSize: 25,
     alignContent: 'center',
+    color: '#000000',
   },
 });
 /* Fin estilos */
