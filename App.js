@@ -1,9 +1,10 @@
 /* Importaciones de Dependencias React,Freamwork,Componetes y pantallas */
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View, } from 'react-native';
-import { Colors, DebugInstructions, Header, LearnMoreLinks, ReloadInstructions, } from 'react-native/Libraries/NewAppScreen';
 import BottonSP from './components/BottonSP';
 import HomeSP from './components/screens/HomeSP';
+import Perfil from './components/screens/Perfil';
+import MainStack from './navigation/MainStack';
 /* Finalizacion de las importaciones */
 
 /* Inicio de aplicacion -- Agregamos las partes a importar para cada pantalla o accion */
@@ -19,9 +20,18 @@ function App() {
           alert("Creando orden...")
         }}
       />
+      <BottonSP 
+      text = "Estes es otro Boton"
+      onPress = {() => {
+          alert("Hicistes accion aqui")
+        }}
+      />
+
     </SafeAreaView>
   );
 };
+
+/* Agregar el MainStack, para la navegacion, se agrega y marca error para mandar a llamar la navegacion */
 /* Finalizacion de la Aplicacion */
 
 

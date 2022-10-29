@@ -2,11 +2,14 @@ import React from "react";
 import { View, Text } from "react-native";
 import BottonSP from "../BottonSP";
 
-const HomeSP = () => {
+const HomeSP = ( navigation) => {
     return(
         <View>
             <BottonSP 
             Text = "Ir al perfil"
+            onPress = { () => {
+                navigation.navigate('Perfil')
+            }}
             />
         </View>
     )
